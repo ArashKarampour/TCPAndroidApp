@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="47dp"
+        android:text="Client"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvRectxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRectxt"
+        android:layout_width="195dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="95dp"
+        android:alpha="0.7"
+        android:text="no message from server"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/serverIP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Client" />
+
+    <EditText
+        android:id="@+id/serverIP"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="24dp"
+        android:alpha="0.6"
+        android:ems="10"
+        android:hint="Server IP"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/serverPort"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRectxt" />
+
+    <EditText
+        android:id="@+id/serverPort"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="22dp"
+        android:alpha="0.6"
+        android:ems="10"
+        android:hint="Port"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/clientPacket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverIP" />
+
+    <EditText
+        android:id="@+id/clientPacket"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="47dp"
+        android:ems="10"
+        android:hint="Packet"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnConnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverPort" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        android:onClick="onClickConnect"
+        android:text="Connect to Server"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSendMsg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clientPacket" />
+
+    <Button
+        android:id="@+id/btnSendMsg"
+        android:layout_width="215dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="59dp"
+        android:onClick="onClickSendMsg"
+        android:text="Send Msg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConnect" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
